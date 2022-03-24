@@ -5,6 +5,7 @@ import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
@@ -121,5 +122,10 @@ public class QRAR extends AppCompatActivity implements
                                 }));
             }
         }
+    }
+
+    public void buttonClickFunction(View v) {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 }

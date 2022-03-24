@@ -10,4 +10,21 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="89dp"
+            android:layout_height="83dp"
+            android:layout_marginBottom="100dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@android:drawable/ic_menu_revert"
+            tools:ignore="SpeakableTextPresentCheck"
+            android:onClick="buttonClickFunction"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </FrameLayout>
