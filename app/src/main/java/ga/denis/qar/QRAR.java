@@ -52,8 +52,6 @@ public class QRAR extends AppCompatActivity implements
         qrgEncoder.setColorBlack(Color.BLACK);
         qrgEncoder.setColorWhite(Color.WHITE);
         qr = Bitmap.createBitmap(qrgEncoder.getBitmap(), 50, 50, 924, 924);
-        ImageView imageView = findViewById(R.id.imageView2);
-        imageView.setImageBitmap(qr);
 
         if (savedInstanceState == null) {
             if (Sceneform.isSupported(this)) {
@@ -81,6 +79,8 @@ public class QRAR extends AppCompatActivity implements
         database.addImage("qr", qr);
 
         config.setAugmentedImageDatabase(database);
+
+        config.setFocusMode(Config.FocusMode.AUTO);
 
         arFragment.setOnAugmentedImageUpdateListener(this::onAugmentedImageTrackingUpdate);
     }
