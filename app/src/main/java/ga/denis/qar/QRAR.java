@@ -49,7 +49,8 @@ public class QRAR extends AppCompatActivity implements
         getSupportFragmentManager().addFragmentOnAttachListener(this);
 
         intent = getIntent();
-        QRGEncoder qrgEncoder = new QRGEncoder(intent.getExtras().getString("text"), null, QRGContents.Type.TEXT, 1024);
+        QRGEncoder qrgEncoder = new QRGEncoder(intent.getExtras().getString("text"),
+                null, QRGContents.Type.TEXT, 1024);
         qrgEncoder.setColorBlack(Color.BLACK);
         qrgEncoder.setColorWhite(Color.WHITE);
         qr = Bitmap.createBitmap(qrgEncoder.getBitmap(), 50, 50, 924, 924);
